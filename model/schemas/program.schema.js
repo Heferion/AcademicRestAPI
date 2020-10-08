@@ -5,7 +5,7 @@ const mongoose= require("mongoose");
 const Schema= mongoose.Schema;
 
 /** Schema creation */
-const courseSchema = new Schema({
+const programSchema = new Schema({
     code:{
         type:"String",
         require: true
@@ -13,9 +13,20 @@ const courseSchema = new Schema({
     name:{
         type:"String",
         require: true
+    },
+
+    directorname:{
+        type:"String",
+        require: true
+    },
+
+    faculty_id:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"coll_faculty",
+        require: true
     }
     
 });
 
 /** schema exportation */
-module.exports = courseSchema;
+module.exports = programSchema;

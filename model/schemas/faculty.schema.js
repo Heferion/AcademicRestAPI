@@ -5,7 +5,7 @@ const mongoose= require("mongoose");
 const Schema= mongoose.Schema;
 
 /** Schema creation */
-const courseSchema = new Schema({
+const facultySchema = new Schema({
     code:{
         type:"String",
         require: true
@@ -13,9 +13,14 @@ const courseSchema = new Schema({
     name:{
         type:"String",
         require: true
+    },
+
+    deanname:{
+        type:"String",
+        require: true
     }
     
 });
 
 /** schema exportation */
-module.exports = courseSchema;
+module.exports = facultySchema;

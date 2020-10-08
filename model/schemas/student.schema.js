@@ -29,8 +29,9 @@ const studentSchema = new Schema({
         type:"String",
         require: true
     },
-    careear:{
-        type:"String",
+    program_id:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "coll_program",
         require: true
     }
 
