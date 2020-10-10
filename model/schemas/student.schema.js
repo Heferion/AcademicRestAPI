@@ -34,7 +34,6 @@ const studentSchema = new Schema({
         ref: "coll_program",
         require: true
     }
-
     
 });
 

@@ -26,7 +26,7 @@ exports.login = (req, res, next) => {
             } else {
                 return res.status(400).json(
                     {
-                        info: "Username pr password are incorrect"
+                        info: "Username or password are incorrect"
                     }
                 );
             }
