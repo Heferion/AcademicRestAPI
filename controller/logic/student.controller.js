@@ -14,7 +14,7 @@ exports.createStudent = (req, res, next)=>{
         lastname:req.body.lastname,
         email: req.body.email,
         phone:req.body.phone,
-        career: req.body.career
+        program_id: req.body.program_id
     };
     studentDto.create(std,(err,data)=>{
         if (err){
@@ -59,9 +59,9 @@ exports.updateStudent = (req, res, next)=>{
         lastname:req.body.lastname,
         email: req.body.email,
         phone:req.body.phone,
-        career: req.body.career
+        program_id: req.body.program_id
     };
-    studentDto.update({_id: req.body.id},std,(err,data)=>{
+    studentDto.update({ _id: req.body.id},std,(err,data)=>{
         if (err){
             return res.status(400).json(
                 {

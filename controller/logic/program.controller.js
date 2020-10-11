@@ -7,7 +7,8 @@ exports.createProgram = (req, res, next) => {
     let program = {
         code: req.body.code,
         name: req.body.name,
-        directorname: req.body.directorname
+        directorname: req.body.directorname,
+        faculty_id: req.body.faculty_id
 
     };
     programDto.create(program, (err, data) => {
@@ -30,7 +31,8 @@ exports.updateProgram = (req, res, next) => {
     let program = {
         code: req.body.code,
         name: req.body.name,
-        directorname: req.body.directorname
+        directorname: req.body.directorname,
+        faculty_id: req.body.faculty_id
     };
     programDto.update({ _id: req.body.id }, program, (err, data) => {
         if (err) {
